@@ -17,18 +17,15 @@ st.subheader("Data Analysis Using Python & Streamlit")
 # UPLOAD DATASET
 # =========================================================
 
-upload = st.file_uploader(
-    "Upload Your IMDB Dataset (CSV Format)",
-    type=["csv"]
-)
 
 
-if upload is not None:
+
+if True:
 
     # Read CSV
-    data = pd.read_csv(upload)
+    data = pd.read_csv("IMDB-Movie-Data.csv")
 
-    st.success("Dataset Uploaded Successfully!")
+    
 
     
 # =========================================================
