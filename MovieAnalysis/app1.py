@@ -3,6 +3,8 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+import os
+
 
 
 # =========================================================
@@ -23,7 +25,10 @@ st.subheader("Data Analysis Using Python & Streamlit")
 if True:
 
     # Read CSV
-    data = pd.read_csv("IMDB-Movie-Data.csv")
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    csv_path = os.path.join(BASE_DIR, "IMDB-Movie-Data.csv")
+
+    data = pd.read_csv(csv_path)
 
     
 
